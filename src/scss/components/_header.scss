@@ -1,33 +1,42 @@
 // Header
 
 @use "../base/settings" as *;
-@use "../utilities/mixins" as *;
 
-.header {
+header {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
     align-items: center;
-    padding: 2rem 3rem;
-  
-    .logo {
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: #3a3a3a;
-    }
-  
-    .nav {
-      a {
-        margin-left: 2rem;
-        text-decoration: none;
-        color: #202020;
-        font-weight: 500;
-  
-        &:last-child::before {
-          content: '● ';
-          color: #ce9a76;
-          margin-right: 0.4rem;
-        }
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    width: 100%;
+    z-index: 1000;
+
+    a{
+      color: $text-color-primary;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: larger;
+      transition: color 0.3s ease;
+      &:hover {
+        color: $text-color-accent;
       }
     }
-  }
-  
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: $text-color-primary;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-color-accent;
+      }
+    }
+      
+}
