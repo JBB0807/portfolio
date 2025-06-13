@@ -3,15 +3,28 @@
 @use '../utilities/functions' as *;
 
 // Colors
-$dark: #1c1c1c;
-$light: #fcfcfc;
-$yellow: #f7df1c;
-$grey: #e1e1e1;
-$red: #d75b5b;
+$background-color-primary: #3A79FF;
+$background-color-primary-gradient: #0037AE;
+
+$background-color-secondary: #2A3263;
+
+$text-color-primary: #F5F5F5;
+$text-color-secondary: #000000;
+$text-color-accent: #ff5722;
+
+$orb-color-lower: #A5BAE6;
+
+
+$orb-color-active: #76D7C7;
+
+
+$orb-color-selection: #60CFFE;
+
+$border-color-primary: #E0E0E0;
 
 // Type
-$bodyFont: 'Roboto', sans-serif;
-$headingFont: 'Alatsi', sans-serif;
+// $bodyFont: 'Roboto', sans-serif;
+// $headingFont: 'Alatsi', sans-serif;
 
 // Layout
-$section-padding: em(16) em(20);
+// $section-padding: em(16) em(20);

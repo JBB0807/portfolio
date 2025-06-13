@@ -2,18 +2,16 @@
 
 // Resets and base styling
 @use "./base/reset";
-@use "./base/type";
+@use "./base/typography";
 @use "./base/main";
 
 // Components
 @use "./components/header";
 @use "./components/footer";
+@use "./components/orb";
 
 //page specific styling
 @use "./page//home";
-@use "./page//login";
-@use "./page/code_editor";
-@use "./page/assignment";
 
 // Utilities
 @use "./utilities/utility-classes";

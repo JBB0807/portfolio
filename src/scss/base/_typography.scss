@@ -3,12 +3,9 @@
 @use 'settings' as *;
 
 body {
-    font-family: $bodyFont;
-    color: $dark;
 }
 
 h1, h2, h3, h4 {
-    font-family: $headingFont;
 }
 
 h1, h2, h3, h4, p {

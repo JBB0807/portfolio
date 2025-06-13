@@ -1,0 +1,35 @@
+@use '../base/settings' as *;
+
+
+.orb-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.orb-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.orb-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: $text-color-secondary;
+  pointer-events: none; // ensures clicks go through to Orb if needed
+  text-align: center;
+}
+
+.main-orb {
+    width: 30%;
+    height: 30%;
+    color: $orb-color-active;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
