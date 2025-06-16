@@ -1,7 +1,7 @@
 import React from "react";
 
-const Orb = ({ label = "", className = "" }) => (
-  <div className={`orb-container ${className}`}>
+const Orb = ({ label = "", className = "", onOrbPressed }) => (
+  <div className={`orb-container ${className}`} onClick={() => onOrbPressed(label)}>
     <div className="orb-label">{label}</div>
     <svg
       viewBox="0 0 100 100"

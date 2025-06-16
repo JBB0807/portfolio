@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Portfolio Website",
+    "description": "A general intro, description of the project.",
+    "url": "https://yourdomain.com/portfolio"
+  },
+  {
+    "name": "Task Manager",
+    "description": "A general intro, description of the project",
+    "url": "https://yourdomain.com/task-manager"
+  }
+]

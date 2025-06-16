@@ -1,0 +1,12 @@
+[
+  {
+    "name": "React",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Portfolio Website", "Task Manager"]
+  },
+  {
+    "name": "Node.js",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Task Manager"]
+  }
+]
