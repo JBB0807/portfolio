@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Frontend",
+    "description": "Describe my experiences in front-end development.",
+    "tech": ["React"]
+  },
+  {
+    "name": "Backend",
+    "description": "Describe my experiences in back-end development.",
+    "tech": ["Node.js"]
+  }
+]

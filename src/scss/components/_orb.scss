@@ -1,5 +1,4 @@
-@use '../base/settings' as *;
-
+@use "../base/settings" as *;
 
 .orb-container {
   position: relative;
@@ -25,11 +24,64 @@
 }
 
 .main-orb {
-    width: 30%;
-    height: 30%;
-    color: $orb-color-active;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  width: 30%;
+  height: 30%;
+  color: $orb-color-active;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.category-orb {
+  width: 30%;
+  height: 30%;
+  color: $orb-color-active;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+}
+
+.tech-orb {
+  width: 30%;
+  height: 30%;
+  color: $orb-color-active;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(50%, 75%);
+}
+
+.project-orb {
+  width: 30%;
+  height: 30%;
+  color: $orb-color-active;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+}
+
+.previous {
+  width: 30%;
+  height: 30%;
+  color: $orb-color-back;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.selected {
+  width: 30%;
+  height: 30%;
+  color: $orb-color-active;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+.hidden {
+  display: none;
+}
