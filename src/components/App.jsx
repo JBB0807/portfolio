@@ -1,32 +1,64 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import OrbTree from "./OrbTree.jsx";
-import { useState } from "react";
+import { use, useState } from "react";
 
 const App = () => {
   const [displayLevel, setDisplayLevel] = useState(0);
   const [selectetOrb, setSelectedOrb] = useState("");
   const [previousOrb, setPreviousOrb] = useState("");
-  const [description, setDescription] = useState("");
-  const [url, setUrl] = useState("");
+  const [project, setProject] = useState([]);
+
+  const [breadcrubms, setBreadCrumbs] = useState([]);
 
   function onOrbPressed(name, description, url) {
     console.log("Orb pressed:", name);
-    setSelectedOrb(name);
-    setPreviousOrb(selectetOrb);
-    setDescription(description);
-    setUrl(url);
-    setDisplayLevel(displayLevel + 1);
+    console.log("Current selected orb:", selectetOrb);
+    console.log("Current previous orb:", previousOrb);
+    console.log("Current display level:", displayLevel);
+
+    if (displayLevel === 1 && name === selectetOrb) {
+      //console.log("Going back to main orb , resetting states");
+      setBreadCrumbs([]);
+      setSelectedOrb("");
+      setPreviousOrb("");
+      setDisplayLevel(0);
+      setProject(null);
+    } else if (previousOrb == name) {
+      //console.log("Going back to previous orb");
+      setPreviousOrb(breadcrubms[breadcrubms.length - 3] || "");
+
+      setBreadCrumbs(breadcrubms.slice(0, -1));
+      setSelectedOrb(name);
+      setProject(null);
+
+      setDisplayLevel(displayLevel - 1);
+    } else if (name !== selectetOrb && displayLevel < 3) {
+      // console.log("Moving up the tree to:", name);
+      setBreadCrumbs([...breadcrubms, name]);
+
+      setPreviousOrb(selectetOrb);
+      setDisplayLevel(displayLevel + 1);
+      setSelectedOrb(name);
+    } else {
+      //last display level, selecting projects
+      // console.log("Selecting project:", name);
+      setProject({ name, description, url });
+    }
   }
 
   return (
     <>
       <Header />
       <main>
+        <div>
+          {displayLevel} , {breadcrubms.join(" > ")} , {selectetOrb} ,{" "}
+          {previousOrb}
+        </div>
         <OrbTree
           displayLevel={displayLevel}
-          selectedOrb={selectetOrb}
           previousOrb={previousOrb}
+          selectedOrb={selectetOrb}
           onOrbPressed={onOrbPressed}
         />
 
