@@ -95,8 +95,15 @@ const App = () => {
                 {project?.url ? (
                   <div className="project-content">
                     <iframe src={project?.url} title={project?.name} />
-                    <div className="project-description"></div>
-                    <div className="iframe-actions"> </div>
+                    <div className="bottom-bar">
+                      <div className="project-description">
+                        Project descripion
+                      </div>
+                      <div className="iframe-actions">
+                        <a href={project?.url} target="_blank" rel="noopener"><button>Open in new tab</button></a>
+                        <button>Github</button>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <div className="tech-description"></div>

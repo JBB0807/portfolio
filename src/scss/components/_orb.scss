@@ -19,14 +19,18 @@
 }
 
 .orb-label {
-  position: absolute;
+  max-height: 90%;
+  max-width: 90%;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.5rem;
+  font-size: 130%;
+  text-align: center;
   color: $text-color-secondary;
   pointer-events: none; // ensures clicks go through to Orb if needed
-  text-align: center;
+  white-space: wrap;
+  overflow: hidden;
 }
 
 .main-orb {
@@ -40,13 +44,14 @@
 }
 
 .category-orb {
-  width: 30%;
-  height: 30%;
+  width: 200px;
+  height: 200px;
   color: $orb-color-active;
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  // transform: translate(-50%, 100%);
+  transform: translate(calc(-100px + 200px * (var(--i))), calc(200px - 200px * (var(--i))));
 }
 
 .tech-orb {
@@ -56,7 +61,8 @@
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  // transform: translate(-50%, 100%);
+  transform: translate(calc(-50% + 100% * (var(--i))), calc(100% - 50% * (var(--i))));
 }
 
 .project-orb {

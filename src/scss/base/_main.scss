@@ -40,7 +40,8 @@ main {
 }
 
 .side-content {
-  padding: 0.5rem;
+  padding: 0.3rem;
+  margin: 1rem;
   background-color: $background-color-secondary;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,6 +50,36 @@ main {
 
 .side-content > * {
   height: 100%;
-  width: 100%;
   border: none;
+}
+
+.side-content * {
+  width: 100%;
+}
+
+.project-content {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+iframe {
+  height: 100%;
+  border: 1px solid $border-color-primary;
+}
+
+.bottom-bar{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.project-description {
+  font-size: larger;
+  color: $text-color-primary;
+}
+
+.iframe-actions {
+  display: flex;
+  gap: 1rem;
 }
