@@ -64,9 +64,9 @@
   height: 20%;
   color: $orb-color-active;
   position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translate(-50%, 75%);
+  bottom: 0%;
+  left: 10%;
+  transform: translateX(calc(-50% + 100% * (var(--i))));
 }
 
 .previous {
@@ -87,7 +87,6 @@
   top: 35%;
   left: 50%;
   transform: translate(-50%, -30%);
-
 }
 
 .hidden {

@@ -1,7 +1,7 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import OrbTree from "./OrbTree.jsx";
-import { use, useState } from "react";
+import { useState } from "react";
 
 const App = () => {
   const [displayLevel, setDisplayLevel] = useState(0);
@@ -12,10 +12,10 @@ const App = () => {
   const [breadcrubms, setBreadCrumbs] = useState([]);
 
   function onOrbPressed(name, description, url) {
-    console.log("Orb pressed:", name);
-    console.log("Current selected orb:", selectetOrb);
-    console.log("Current previous orb:", previousOrb);
-    console.log("Current display level:", displayLevel);
+    // console.log("Orb pressed:", name);
+    // console.log("Current selected orb:", selectetOrb);
+    // console.log("Current previous orb:", previousOrb);
+    // console.log("Current display level:", displayLevel);
 
     if (displayLevel === 1 && name === selectetOrb) {
       //console.log("Going back to main orb , resetting states");
@@ -87,12 +87,22 @@ const App = () => {
           )}
         </div>
 
-        {displayLevel === 3 && (
-          <div className="project-content">
-            <iframe
-              src={project?.url}
-              title={project?.name}
-            />
+        {displayLevel >= 2 && (
+          <div className="side-content">
+            {displayLevel === 2 && <div className="category-description"></div>}
+            {displayLevel === 3 && (
+              <div>
+                {project?.url ? (
+                  <div className="project-content">
+                    <iframe src={project?.url} title={project?.name} />
+                    <div className="project-description"></div>
+                    <div className="iframe-actions"> </div>
+                  </div>
+                ) : (
+                  <div className="tech-description"></div>
+                )}
+              </div>
+            )}
           </div>
         )}
       </main>

@@ -39,7 +39,7 @@ main {
   }
 }
 
-.project-content {
+.side-content {
   padding: 0.5rem;
   background-color: $background-color-secondary;
   border-radius: 8px;
@@ -47,8 +47,8 @@ main {
   width: 55%;
 }
 
-iframe {
-  width: 100%;
+.side-content > * {
   height: 100%;
+  width: 100%;
   border: none;
 }

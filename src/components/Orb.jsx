@@ -6,6 +6,7 @@ const Orb = ({
   url = "",
   className = "",
   onOrbPressed,
+  index,
 }) => {
   const gradientId = `orbGradient-${label.replace(/\s+/g, "-")}`;
 
@@ -13,6 +14,7 @@ const Orb = ({
     <div
       className={`orb-container ${className}`}
       onClick={() => onOrbPressed(label, description, url)}
+      style={{ "--i": `${index}` }}
     >
       <div className="orb-label">{label}</div>
       <svg

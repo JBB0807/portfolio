@@ -10,7 +10,6 @@ const OrbTree = ({
   previousOrb = "",
   onOrbPressed,
 }) => {
-  
   //convert json data to a map
   const categories = Object.keys(Categories).map((key) => ({
     key: key,
@@ -45,60 +44,95 @@ const OrbTree = ({
     })),
   };
 
-  function getDisplayClass(orbName) {
+const getDisplayClass = (orbName) => {
     if (orbName === selectedOrb) {
       return "selected";
     } else if (orbName === previousOrb) {
       return "previous";
-    } else if ((displayLevel === 0 && orbName === "JB Balahadia") || 
-      (displayLevel === 1 && skillTree.categories.some(cat => cat.name === orbName)) || 
-      (displayLevel === 2 && skillTree.categories.some(cat => cat.tech.some(techItem => techItem.name === orbName))) || 
-      (displayLevel === 3 && skillTree.tech.some(techItem => techItem.projects.some(project => project.name === orbName)))) {
+    } else if (
+      (displayLevel === 0 && orbName === "JB Balahadia") ||
+      (displayLevel === 1 &&
+        skillTree.categories.some((cat) => cat.name === orbName)) ||
+      (displayLevel === 2 &&
+        skillTree.categories.some((cat) =>
+          cat.tech.some((techItem) => techItem.name === orbName)
+        )) ||
+      (displayLevel === 3 &&
+        skillTree.tech.some((techItem) =>
+          techItem.projects.some((project) => project.name === orbName)
+        ))
+    ) {
       return "selections";
     } else {
       return "hidden";
     }
+  };
+
+  // Create a counter for the index of projects
+  const getProjectIndex = createIndexCounter();
+  const getTechIndex = createIndexCounter();
+  const getCategoryIndex = createIndexCounter();
+
+  function createIndexCounter(orbName) {
+    let counter = -1;
+    return (shouldCount = getDisplayClass(orbName) == "selections") => {
+      if (shouldCount) {
+        counter += 1;
+        return counter;
+      }
+      return null;
+    };
   }
 
   return (
     <div className="orb-tree">
-          
-     <Orb
-           label="JB Balahadia"
-           className={`main-orb ${getDisplayClass("JB Balahadia")}`}
-           onOrbPressed={() => onOrbPressed("JB Balahadia")}
-         />
+      <Orb
+        label="JB Balahadia"
+        className={`main-orb ${getDisplayClass("JB Balahadia")}`}
+        onOrbPressed={() => onOrbPressed("JB Balahadia")}
+      />
 
-      {skillTree.categories.map((category) => (
-        <Orb
-          key={category.key}
-          label={category.name}
-          className={`category-orb ${getDisplayClass(category.name)}`}
-          onOrbPressed={() => onOrbPressed(category.name)}
-        />
-      ))}
-
-      {skillTree.categories.map((category) =>
-        category.tech.map((techItem) => (
+      <div className="orb-category">
+        {skillTree.categories.map((category) => (
           <Orb
-            key={techItem.key}
-            label={techItem.name}
-            className={`tech-orb ${getDisplayClass(techItem.name)}`}
-            onOrbPressed={() => onOrbPressed(techItem.name)}
+            key={category.key}
+            label={category.name}
+            className={`category-orb ${getDisplayClass(category.name)}`}
+            onOrbPressed={() => onOrbPressed(category.name)}
+            index={getCategoryIndex(category.name)}
           />
-        ))
-      )}
+        ))}
+      </div>
 
-      {skillTree.tech.map((techItem) =>
-        techItem.projects.map((project) => (
-          <Orb
-            key={project.key}
-            label={project.name}
-            className={`project-orb ${getDisplayClass(project.name)}`}
-            onOrbPressed={() => onOrbPressed(project.name, project.description, project.url)}
-          />
-        ))
-      )}
+      <div className="orb-tech">
+        {skillTree.categories.map((category) =>
+          category.tech.map((techItem) => (
+            <Orb
+              key={techItem.key}
+              label={techItem.name}
+              className={`tech-orb ${getDisplayClass(techItem.name)}`}
+              onOrbPressed={() => onOrbPressed(techItem.name)}
+              index={getTechIndex(techItem.name)}
+            />
+          ))
+        )}
+      </div>
+
+      <div className="orb-projects">
+        {skillTree.tech.map((techItem) =>
+          techItem.projects.map((project) => (
+            <Orb
+              key={project.key}
+              label={project.name}
+              className={`project-orb ${getDisplayClass(project.name)}`}
+              onOrbPressed={() =>
+                onOrbPressed(project.name, project.description, project.url)
+              }
+              index={getProjectIndex(project.name)}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };
