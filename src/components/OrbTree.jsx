@@ -95,7 +95,7 @@ const OrbTree = ({
             key={project.key}
             label={project.name}
             className={`project-orb ${getDisplayClass(project.name)}`}
-            onOrbPressed={() => onOrbPressed(project.name)}
+            onOrbPressed={() => onOrbPressed(project.name, project.description, project.url)}
           />
         ))
       )}

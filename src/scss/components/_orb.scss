@@ -1,5 +1,11 @@
 @use "../base/settings" as *;
 
+.orb-tree {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .orb-container {
   position: relative;
   width: 100%;
@@ -40,7 +46,7 @@
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, 75%);
+  transform: translate(-50%, 100%);
 }
 
 .tech-orb {
@@ -50,27 +56,27 @@
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(50%, 75%);
+  transform: translate(-50%, 100%);
 }
 
 .project-orb {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   color: $orb-color-active;
   position: absolute;
-  top: 35%;
+  bottom: 15%;
   left: 50%;
   transform: translate(-50%, 75%);
 }
 
 .previous {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   color: $orb-color-back;
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-175%, -100%);
 }
 
 .selected {
@@ -80,6 +86,8 @@
   position: absolute;
   top: 35%;
   left: 50%;
+  transform: translate(-50%, -30%);
+
 }
 
 .hidden {
