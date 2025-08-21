@@ -1,15 +1,18 @@
 @use "../base/settings" as *;
 
 .orb-tree {
-  display: block;
-  height: 100%;
+  position: relative;
+  height: 80vh;
   width: 100%;
 }
 
 .orb-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
+    height 0.5s ease-in-out, background-color 0.5s ease-in-out, /* or color if using text color */
+    opacity 0.5s ease-in-out;
 }
 
 .orb-container svg {
@@ -19,9 +22,10 @@
 }
 
 .orb-label {
+  width: 100%;
   max-height: 90%;
   max-width: 90%;
-  position: fixed;
+  position: inherit;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,67 +38,47 @@
 }
 
 .main-orb {
-  width: 30%;
-  height: 30%;
-  color: $orb-color-active;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.category-orb {
   width: 200px;
   height: 200px;
   color: $orb-color-active;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  // transform: translate(-50%, 100%);
-  transform: translate(calc(-100px + 200px * (var(--i))), calc(200px - 200px * (var(--i))));
 }
 
+.category-orb,
 .tech-orb {
-  width: 30%;
-  height: 30%;
+  --angle: calc(var(--i) * 30deg); /* 30° spacing */
+  --radius: 200px; /* distance from center */
+
+  width: 100px;
+  height: 100px;
   color: $orb-color-active;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  // transform: translate(-50%, 100%);
-  transform: translate(calc(-50% + 100% * (var(--i))), calc(100% - 50% * (var(--i))));
+  transform: rotate(var(--angle)) translate(var(--radius), 200px)
+    rotate(calc(-1 * var(--angle)));
 }
 
 .project-orb {
+  opacity: 1;
   width: 20%;
   height: 20%;
   color: $orb-color-active;
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
-  transform: translateX(calc(-50% + 100% * (var(--i))));
+  transform: translate(calc(-250% + 100% * (var(--i))), 350%);
 }
 
 .previous {
-  width: 20%;
-  height: 20%;
+  opacity: 1;
+  width: 100px;
+  height: 100px;
   color: $orb-color-back;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-175%, -100%);
+  transform: translate(-100px, -25px);
 }
 
 .selected {
-  width: 30%;
-  height: 30%;
+  width: 200px;
+  height: 200px;
   color: $orb-color-active;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translateY(25%);
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }

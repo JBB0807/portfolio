@@ -67,51 +67,49 @@ const App = () => {
             onOrbPressed={onOrbPressed}
           />
 
-          {displayLevel === 0 && (
-            <p>
-              As a software engineer with diverse experience, I have a strong
-              background in software development and maintenance, system
-              integration, and process optimization. During my time at
-              Accenture, I led the integration of enterprise systems, driving
-              efficiency and solving complex problems across multiple platforms.
-              <br />
-              <br />
-              I recently completed the Software Systems Development program at
-              BCIT, where I gained hands-on experience with modern frameworks
-              such as .NET, React, Node.js, and cloud technologies.
-              <br />
-              <br />I take a generalist approach to engineering, applying a
-              broad skill set to solve problems and deliver practical,
-              well-integrated solutions across different domains.
-            </p>
-          )}
+          <p className={displayLevel !== 0 ? "hidden" : ""}>
+            As a software engineer with diverse experience, I have a strong
+            background in software development and maintenance, system
+            integration, and process optimization. During my time at Accenture,
+            I led the integration of enterprise systems, driving efficiency and
+            solving complex problems across multiple platforms.
+            <br />
+            <br />
+            I recently completed the Software Systems Development program at
+            BCIT, where I gained hands-on experience with modern frameworks such
+            as .NET, React, Node.js, and cloud technologies.
+            <br />
+            <br />I take a generalist approach to engineering, applying a broad
+            skill set to solve problems and deliver practical, well-integrated
+            solutions across different domains.
+          </p>
         </div>
 
-        {displayLevel >= 2 && (
-          <div className="side-content">
-            {displayLevel === 2 && <div className="category-description"></div>}
-            {displayLevel === 3 && (
-              <div>
-                {project?.url ? (
-                  <div className="project-content">
-                    <iframe src={project?.url} title={project?.name} />
-                    <div className="bottom-bar">
-                      <div className="project-description">
-                        Project descripion
-                      </div>
-                      <div className="iframe-actions">
-                        <a href={project?.url} target="_blank" rel="noopener"><button>Open in new tab</button></a>
-                        <button>Github</button>
-                      </div>
+        <div className={`side-content ${displayLevel > 1 ? "expanded" : "hidden"}`}>
+          {displayLevel === 2 && <div className="category-description"></div>}
+          {displayLevel === 3 && (
+            <div>
+              {project?.url ? (
+                <div className="project-content">
+                  <iframe src={project?.url} title={project?.name} />
+                  <div className="bottom-bar">
+                    <div className="project-description">
+                      Project descripion
+                    </div>
+                    <div className="iframe-actions">
+                      <a href={project?.url} target="_blank" rel="noopener">
+                        <button>Open in new tab</button>
+                      </a>
+                      <button>Github</button>
                     </div>
                   </div>
-                ) : (
-                  <div className="tech-description"></div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
+                </div>
+              ) : (
+                <div className="tech-description"></div>
+              )}
+            </div>
+          )}
+        </div>
       </main>
       <Footer />
     </>
