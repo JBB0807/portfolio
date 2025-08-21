@@ -1,12 +1,14 @@
 [
   {
-    "name": "Portfolio Website",
+    "name": "Battle Snake APIs",
     "description": "A general intro, description of the project.",
-    "url": "https://yourdomain.com/portfolio"
+    "url": "https://battlesnake.jbbalahadia.ca/",
+    "github" : ""
   },
   {
-    "name": "Task Manager",
+    "name": "Hextris",
     "description": "A general intro, description of the project",
-    "url": "https://yourdomain.com/task-manager"
+    "url": "https://hextrixweb.jbbalahadia.ca/",
+    "github" : ""
   }
 ]

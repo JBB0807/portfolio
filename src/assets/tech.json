@@ -7,6 +7,6 @@
   {
     "name": "Node.js",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Task Manager"]
+    "projects": ["Battle Snake APIs","Hextris"]
   }
 ]

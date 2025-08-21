@@ -1,7 +1,7 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import OrbTree from "./OrbTree.jsx";
-import { use, useState } from "react";
+import { useState } from "react";
 
 const App = () => {
   const [displayLevel, setDisplayLevel] = useState(0);
@@ -12,10 +12,10 @@ const App = () => {
   const [breadcrubms, setBreadCrumbs] = useState([]);
 
   function onOrbPressed(name, description, url) {
-    console.log("Orb pressed:", name);
-    console.log("Current selected orb:", selectetOrb);
-    console.log("Current previous orb:", previousOrb);
-    console.log("Current display level:", displayLevel);
+    // console.log("Orb pressed:", name);
+    // console.log("Current selected orb:", selectetOrb);
+    // console.log("Current previous orb:", previousOrb);
+    // console.log("Current display level:", displayLevel);
 
     if (displayLevel === 1 && name === selectetOrb) {
       //console.log("Going back to main orb , resetting states");
@@ -43,6 +43,10 @@ const App = () => {
     } else {
       //last display level, selecting projects
       // console.log("Selecting project:", name);
+      if (!description || !url) {
+        // Not a valid project, do not update project state
+        return;
+      }
       setProject({ name, description, url });
     }
   }
@@ -51,19 +55,19 @@ const App = () => {
     <>
       <Header />
       <main>
-        <div>
-          {displayLevel} , {breadcrubms.join(" > ")} , {selectetOrb} ,{" "}
-          {previousOrb}
-        </div>
-        <OrbTree
-          displayLevel={displayLevel}
-          previousOrb={previousOrb}
-          selectedOrb={selectetOrb}
-          onOrbPressed={onOrbPressed}
-        />
+        <div className="main-content">
+          <div>
+            {displayLevel} , {breadcrubms.join(" > ")} , {selectetOrb} ,{" "}
+            {previousOrb}
+          </div>
+          <OrbTree
+            displayLevel={displayLevel}
+            previousOrb={previousOrb}
+            selectedOrb={selectetOrb}
+            onOrbPressed={onOrbPressed}
+          />
 
-        {displayLevel === 0 && (
-          <p>
+          <p className={displayLevel !== 0 ? "hidden" : ""}>
             As a software engineer with diverse experience, I have a strong
             background in software development and maintenance, system
             integration, and process optimization. During my time at Accenture,
@@ -79,7 +83,33 @@ const App = () => {
             skill set to solve problems and deliver practical, well-integrated
             solutions across different domains.
           </p>
-        )}
+        </div>
+
+        <div className={`side-content ${displayLevel > 1 ? "expanded" : "hidden"}`}>
+          {displayLevel === 2 && <div className="category-description"></div>}
+          {displayLevel === 3 && (
+            <div>
+              {project?.url ? (
+                <div className="project-content">
+                  <iframe src={project?.url} title={project?.name} />
+                  <div className="bottom-bar">
+                    <div className="project-description">
+                      Project descripion
+                    </div>
+                    <div className="iframe-actions">
+                      <a href={project?.url} target="_blank" rel="noopener">
+                        <button>Open in new tab</button>
+                      </a>
+                      <button>Github</button>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="tech-description"></div>
+              )}
+            </div>
+          )}
+        </div>
       </main>
       <Footer />
     </>
