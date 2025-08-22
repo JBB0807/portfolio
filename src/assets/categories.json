@@ -1,11 +1,26 @@
 [
   {
-    "name": "Frontend",
+    "name": "FrontEnd",
     "description": "Describe my experiences in front-end development.",
-    "tech": ["React"]
+    "tech": ["React", "Angular" ,"JavaScript"]
   },
   {
-    "name": "Backend",
+    "name": "BackEnd",
+    "description": "Describe my experiences in front-end development.",
+    "tech": ["Node.js", "C# .NET", "Java", "SQL NoSQL"]
+  },
+  {
+    "name": "Mobile",
+    "description": "Describe my experiences in back-end development.",
+    "tech": ["React Native", "Android"]
+  },
+  {
+    "name": "Cloud DevOps",
+    "description": "Describe my experiences in back-end development.",
+    "tech": ["AWS", "Docker"]
+  },
+  {
+    "name": "Docs",
     "description": "Describe my experiences in back-end development.",
     "tech": ["Node.js"]
   }

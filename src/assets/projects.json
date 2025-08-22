@@ -1,14 +1,44 @@
 [
   {
+    "name": "Battle Snake",
+    "description": "A general intro, description of the project.",
+    "url": "https://battlesnake.jbbalahadia.ca/",
+    "github" : ""
+  },
+  {
     "name": "Battle Snake APIs",
     "description": "A general intro, description of the project.",
     "url": "https://battlesnake.jbbalahadia.ca/",
     "github" : ""
   },
   {
-    "name": "Hextris",
+    "name": "Hextris Website",
     "description": "A general intro, description of the project",
     "url": "https://hextrixweb.jbbalahadia.ca/",
+    "github" : ""
+  },
+  {
+    "name": "Hextris Game",
+    "description": "A general intro, description of the project",
+    "url": "https://jbb0807.github.io/hextris/",
+    "github" : ""
+  },
+  {
+    "name": "Marquee",
+    "description": "A general intro, description of the project",
+    "url": "https://jbb0807.github.io/JavaScript-Game-Project/",
+    "github" : ""
+  },
+  {
+    "name": "Calculator",
+    "description": "A general intro, description of the project",
+    "url": "https://jbb0807.github.io/ReactCalculatorJB/",
+    "github" : ""
+  }  ,
+  {
+    "name": "Bluetooth Keyboard",
+    "description": "A general intro, description of the project",
+    "url": "https://play.google.com/store/apps/details?id=com.jb.bluetoothbuttons",
     "github" : ""
   }
 ]

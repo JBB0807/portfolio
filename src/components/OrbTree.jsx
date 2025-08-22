@@ -51,21 +51,24 @@ const OrbTree = ({
       return "previous";
     } else if (
       (displayLevel === 0 && orbName === "JB Balahadia") ||
+      //if display level is 1, show categories
       (displayLevel === 1 &&
         skillTree.categories.some((cat) => cat.name === orbName)) ||
+      //if display level is 2, show tech under the selected category
       (displayLevel === 2 &&
-        skillTree.categories.some((cat) =>
-          cat.tech.some((techItem) => techItem.name === orbName)
-        )) ||
+        skillTree.categories
+          .find((cat) => cat.name === selectedOrb)
+          ?.tech.some((techItem) => techItem.name === orbName)) ||
+      //if display level is 3, show projects under the selected tech
       (displayLevel === 3 &&
-        skillTree.tech.some((techItem) =>
-          techItem.projects.some((project) => project.name === orbName)
-        ))
+        skillTree.tech
+          .find((t) => t.name === selectedOrb)
+          ?.projects.some((project) => project.name === orbName))
     ) {
       return selectionClass;
     } else {
       let hide = "hidden";
-      //temporary fix to hide the main orb without the twitching bug 
+      //temporary fix to hide the main orb without the twitching bug
       if (orbName === "JB Balahadia") {
         hide += " previous";
       }
@@ -97,8 +100,8 @@ const OrbTree = ({
         onOrbPressed={() => onOrbPressed("JB Balahadia")}
       />
 
-      {/* <div className="orb-category"> */}
-      {skillTree.categories.map((category) => (
+      {/* <div className="category-container"> */}
+      {categories.map((category) => (
         <Orb
           key={category.key}
           label={category.name}
@@ -113,39 +116,35 @@ const OrbTree = ({
       {/* </div> */}
 
       {/* <div className="orb-tech"> */}
-      {skillTree.categories.map((category) =>
-        category.tech.map((techItem) => (
-          <Orb
-            key={techItem.key}
-            label={techItem.name}
-            className={`tech-orb ${getDisplayClass(
-              techItem.name,
-              "orbital-selections"
-            )}`}
-            onOrbPressed={() => onOrbPressed(techItem.name)}
-            index={getTechIndex(techItem.name)}
-          />
-        ))
-      )}
+      {tech.map((techItem) => (
+        <Orb
+          key={techItem.key}
+          label={techItem.name}
+          className={`tech-orb ${getDisplayClass(
+            techItem.name,
+            "orbital-selections"
+          )}`}
+          onOrbPressed={() => onOrbPressed(techItem.name)}
+          index={getTechIndex(techItem.name)}
+        />
+      ))}
       {/* </div> */}
 
       {/* <div className="orb-projects"> */}
-      {skillTree.tech.map((techItem) =>
-        techItem.projects.map((project) => (
-          <Orb
-            key={project.key}
-            label={project.name}
-            className={`project-orb ${getDisplayClass(
-              project.name,
-              "selections"
-            )}`}
-            onOrbPressed={() =>
-              onOrbPressed(project.name, project.description, project.url)
-            }
-            index={getProjectIndex(project.name)}
-          />
-        ))
-      )}
+      {projects.map((project) => (
+        <Orb
+          key={project.key}
+          label={project.name}
+          className={`project-orb ${getDisplayClass(
+            project.name,
+            "selections"
+          )}`}
+          onOrbPressed={() =>
+            onOrbPressed(project.name, project.description, project.url)
+          }
+          index={getProjectIndex(project.name)}
+        />
+      ))}
     </div>
     // </div>
   );

@@ -3,17 +3,15 @@
 @use "../base/settings" as *;
 
 header {
-    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     gap: 2rem;
     align-items: center;
-    top: 0;
-    left: 0;
-    margin: 2rem;
+    padding: 2rem 0 1rem 1rem;
     width: 100%;
     z-index: 1000;
+    position: relative;
 
     a{
       color: $text-color-primary;
