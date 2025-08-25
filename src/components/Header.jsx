@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import Profile from "../assets/profile.json";
+
+//get data from profile.json
+const email = Profile.email;
+const linkedin = Profile.linkedin;
+const github = Profile.github;
 
 //Header with hamburger menu, home, email, and linkedin links
 const Header = () => {
@@ -7,7 +13,11 @@ const Header = () => {
   return (
     <header>
       <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-        <img src="/burger-icon.svg" alt="Menu" style={{ width: "24px", height: "24px" }} />
+        <img
+          src="/burger-icon.svg"
+          alt="Menu"
+          style={{ width: "24px", height: "24px" }}
+        />
       </button>
       <nav
         style={{
@@ -22,17 +32,17 @@ const Header = () => {
         }}
       ></nav>
       <a href="/">Home</a>
-      <a href="mailto:your.email@example.com">Email</a>
-      <a
-        href="https://www.linkedin.com/in/yourprofile"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+        Email
+      </a>
+      <a href={linkedin} target="_blank" rel="noopener noreferrer">
         LinkedIn
+      </a>
+      <a href={github} target="_blank" rel="noopener noreferrer">
+        Github
       </a>
     </header>
   );
 };
 
 export default Header;
-
