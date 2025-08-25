@@ -22,6 +22,6 @@
   {
     "name": "Docs",
     "description": "Describe my experiences in back-end development.",
-    "tech": ["Node.js"]
+    "tech": ["Design","Diagrams", "Procedures","Notes"]
   }
 ]

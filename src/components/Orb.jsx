@@ -4,6 +4,7 @@ const Orb = ({
   label = "",
   description = "",
   url = "",
+  github = "",
   className = "",
   onOrbPressed,
   index,
@@ -13,7 +14,7 @@ const Orb = ({
   return (
     <div
       className={`orb-container ${className}`}
-      onClick={() => onOrbPressed(label, description, url)}
+      onClick={() => onOrbPressed(label, description, url, github)}
       style={{ "--i": `${index}` }}
     >
       <div className="orbit">

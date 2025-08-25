@@ -27,7 +27,7 @@
     "name": "Marquee",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/JavaScript-Game-Project/",
-    "github" : ""
+    "github": "https://github.com/JBB0807/JavaScript-Game-Project"
   },
   {
     "name": "Calculator",
@@ -39,6 +39,36 @@
     "name": "Bluetooth Keyboard",
     "description": "A general intro, description of the project",
     "url": "https://play.google.com/store/apps/details?id=com.jb.bluetoothbuttons",
+    "github" : ""
+  },
+  {
+    "name": "Light Meter",
+    "description": "A general intro, description of the project",
+    "url": "https://play.google.com/store/apps/details?id=com.jb.lightmeter",
+    "github" : ""
+  },
+  {
+    "name": "Pokedex",
+    "description": "A general intro, description of the project",
+    "url": "https://jbb0807.github.io/Pokedex/",
+    "github" : ""
+  },
+  {
+    "name": "MVC Notes",
+    "description": "A general intro, description of the project",
+    "url": "https://docs.google.com/document/d/1UinTznPje9l1VffbPrd3B7vkyRd-TUHfxr-V6lOgJLU/edit?usp=sharing",
+    "github" : ""
+  },
+  {
+    "name": "Installation Guide",
+    "description": "A general intro, description of the project",
+    "url": "https://docs.google.com/document/d/1A1JNXvhFoyIRF_xe2wAA5yXFg3eEq_vG3EjV2wHymTw/edit?usp=sharing",
+    "github" : ""
+  },  
+  {
+    "name": "Machine Tag - User Manual",
+    "description": "A general intro, description of the project",
+    "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
     "github" : ""
   }
 ]

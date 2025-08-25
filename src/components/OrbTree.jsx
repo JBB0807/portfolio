@@ -30,6 +30,7 @@ const OrbTree = ({
     name: Projects[key].name,
     description: Projects[key].description,
     url: Projects[key].url,
+    github: Projects[key].github,
   }));
 
   // Create a skill tree structure using the categories, tech, and projects
@@ -75,23 +76,41 @@ const OrbTree = ({
       return hide;
     }
   };
+  
+  function getPosition(orbName){
+    let index = 0;
+    if (displayLevel === 0) {
+      return 0; // Main orb index
+    } else if (displayLevel === 1) {
+      index = skillTree.categories.findIndex((cat) => cat.name === orbName);
+    } else if (displayLevel === 2) {
+      const category = skillTree.categories.find(
+        (cat) => cat.name === selectedOrb
+      );
+      index = category ? category.tech.findIndex((t) => t.name === orbName) : 0;
+    } else if (displayLevel === 3) {
+      const techItem = skillTree.tech.find(
+        (t) => t.name === selectedOrb
+      );
+      index = techItem ? techItem.projects.findIndex((p) => p.name === orbName) : 0;
+    }
 
-  // Create a counter for the index of projects
-  const getProjectIndex = createIndexCounter();
-  const getTechIndex = createIndexCounter();
-  const getCategoryIndex = createIndexCounter();
-
-  function createIndexCounter(orbName) {
-    let counter = -1;
-    return (shouldCount = getDisplayClass(orbName) == "selections") => {
-      if (shouldCount) {
-        counter += 1;
-        return counter;
-      }
-      return null;
-    };
+    return getAngleMultipler(index); // Default case
   }
-
+  
+  // Function to calculate the angle multiplier based on the index
+  // To achieve altenating angles for each orb
+  // e.g. index | multiplier
+  //       0     | 0
+  //       1     | 1
+  //       2     | -1
+  //       3     | 2
+  //       4     | -2
+  function getAngleMultipler(x) {
+  const sign = 1 - 2 * ((x + 1) % 2);       
+  const magnitude = Math.floor((x + 1) / 2);
+  return sign * magnitude;
+}
   return (
     <div className="orb-tree">
       <Orb
@@ -110,7 +129,7 @@ const OrbTree = ({
             "orbital-selections"
           )}`}
           onOrbPressed={() => onOrbPressed(category.name)}
-          index={getCategoryIndex(category.name)}
+          index={getPosition(category.name)}
         />
       ))}
       {/* </div> */}
@@ -125,7 +144,7 @@ const OrbTree = ({
             "orbital-selections"
           )}`}
           onOrbPressed={() => onOrbPressed(techItem.name)}
-          index={getTechIndex(techItem.name)}
+          index={getPosition(techItem.name)}
         />
       ))}
       {/* </div> */}
@@ -140,9 +159,9 @@ const OrbTree = ({
             "selections"
           )}`}
           onOrbPressed={() =>
-            onOrbPressed(project.name, project.description, project.url)
+            onOrbPressed(project.name, project.description, project.url, project.github)
           }
-          index={getProjectIndex(project.name)}
+          index={getPosition(project.name)}
         />
       ))}
     </div>

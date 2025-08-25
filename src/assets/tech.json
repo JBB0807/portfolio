@@ -53,5 +53,25 @@
     "name": "Docker",
     "description": "Describe my experiences/opinions about React.",
     "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Design",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Diagrams",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Procedures",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Installation Guide"]
+  },
+  {
+    "name": "Notes",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["MVC Notes", "Machine Tag - User Manual"]
   }
 ]
