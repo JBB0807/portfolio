@@ -2,11 +2,76 @@
   {
     "name": "React",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Portfolio Website", "Task Manager"]
+    "projects": ["Portfolio Website", "Battle Snake", "Calculator"]
+  },
+  {
+    "name": "JavaScript",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Marquee","Hextris Game"]
+  },
+  {
+    "name": "Angular",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Battle Snake APIs","Hextris"]
   },
   {
     "name": "Node.js",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Battle Snake APIs","Hextris"]
+    "projects": ["Battle Snake APIs","Hextris Website"]
+  },
+  {
+    "name": "C# .NET",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Battle Snake APIs","Hextris Website"]
+  },
+  {
+    "name": "Java",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Battle Snake APIs","Hextris Website"]
+  },
+  {
+    "name": "SQL NoSQL",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Battle Snake APIs","Hextris Website"]
+  },
+  {
+    "name": "React Native",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Pokedex"]
+  },
+  {
+    "name": "Android",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "AWS",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Docker",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Design",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Diagrams",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Bluetooth Keyboard","Light Meter"]
+  },
+  {
+    "name": "Procedures",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["Installation Guide"]
+  },
+  {
+    "name": "Notes",
+    "description": "Describe my experiences/opinions about React.",
+    "projects": ["MVC Notes", "Machine Tag - User Manual"]
   }
 ]

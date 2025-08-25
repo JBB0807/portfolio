@@ -9,19 +9,24 @@ body {
   );
 }
 
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
 main {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  padding: 2rem;
+  min-height: 100%;
+  padding: 0 1rem 0 1rem;
 }
 
 .main-content {
   position: relative;
   flex: 1;
-  padding: 1rem;
-  margin-top: 2rem; // Adjusted to account for fixed header
-  margin-bottom: 2rem; // Adjusted to account for fixed footer
+  height: 100%;
   p {
     position: fixed;
     bottom: 3rem;
@@ -42,7 +47,6 @@ main {
 
 .side-content {
   padding: 0.3rem;
-  margin: 1rem;
   background-color: $background-color-secondary;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -88,4 +92,14 @@ iframe {
 .iframe-actions {
   display: flex;
   gap: 1rem;
+}
+
+.iframe-actions button {
+  border: none;
+  height: 4rem;
+  width: 6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }

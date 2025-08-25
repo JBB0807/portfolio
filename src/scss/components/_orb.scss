@@ -2,17 +2,30 @@
 
 .orb-tree {
   position: relative;
-  height: 80vh;
+  display: block;
+  height: 100%;
   width: 100%;
+  padding: 1rem;
 }
 
 .orb-container {
   position: absolute;
-  top: 10%;
-  left: 45%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
   transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
-    height 0.5s ease-in-out, background-color 0.5s ease-in-out, /* or color if using text color */
-    opacity 0.5s ease-in-out;
+    height 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    /* or color if using text color */ opacity 0.5s ease-in-out;
+}
+
+.orbit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
+    height 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    /* or color if using text color */ opacity 0.5s ease-in-out;
 }
 
 .orb-container svg {
@@ -45,13 +58,20 @@
 
 .category-orb,
 .tech-orb {
-  --angle: calc(var(--i) * 30deg); /* 30° spacing */
+  width: 100px;
+  height: 100px;
+  color: $orb-color-active;
+  transform: translate(-50%, 50%);
+}
+
+.orbital-selections .orbit {
+  --angle: calc(90deg + var(--i) * 30deg); /* 30° spacing */
   --radius: 200px; /* distance from center */
 
   width: 100px;
   height: 100px;
   color: $orb-color-active;
-  transform: rotate(var(--angle)) translate(var(--radius), 200px)
+  transform: rotate(var(--angle)) translate(var(--radius))
     rotate(calc(-1 * var(--angle)));
 }
 
@@ -60,7 +80,7 @@
   width: 20%;
   height: 20%;
   color: $orb-color-active;
-  transform: translate(calc(-250% + 100% * (var(--i))), 350%);
+  transform: translate(calc(-250% + 100% * (var(--i))), 300%);
 }
 
 .previous {
@@ -68,14 +88,15 @@
   width: 100px;
   height: 100px;
   color: $orb-color-back;
-  transform: translate(-100px, -25px);
+  transform: translate(-200px, -50px);
 }
 
 .selected {
   width: 200px;
   height: 200px;
   color: $orb-color-active;
-  transform: translateY(25%);
+  transform: translate(-50%, 0%);
+  z-index: 1000;
 }
 
 .hidden {

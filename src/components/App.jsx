@@ -11,7 +11,7 @@ const App = () => {
 
   const [breadcrubms, setBreadCrumbs] = useState([]);
 
-  function onOrbPressed(name, description, url) {
+  function onOrbPressed(name, description, url, github) {
     // console.log("Orb pressed:", name);
     // console.log("Current selected orb:", selectetOrb);
     // console.log("Current previous orb:", previousOrb);
@@ -47,7 +47,7 @@ const App = () => {
         // Not a valid project, do not update project state
         return;
       }
-      setProject({ name, description, url });
+      setProject({ name, description, url, github });
     }
   }
 
@@ -85,7 +85,9 @@ const App = () => {
           </p>
         </div>
 
-        <div className={`side-content ${displayLevel > 1 ? "expanded" : "hidden"}`}>
+        <div
+          className={`side-content ${displayLevel > 1 ? "expanded" : "hidden"}`}
+        >
           {displayLevel === 2 && <div className="category-description"></div>}
           {displayLevel === 3 && (
             <div>
@@ -100,7 +102,15 @@ const App = () => {
                       <a href={project?.url} target="_blank" rel="noopener">
                         <button>Open in new tab</button>
                       </a>
-                      <button>Github</button>
+                      {project?.github && (
+                        <a
+                          href={project?.github}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <button>Github</button>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
