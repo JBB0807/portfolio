@@ -11,8 +11,6 @@ const App = () => {
 
   const [breadcrubms, setBreadCrumbs] = useState([]);
 
-  
-
   function onOrbPressed(name, description, url, github) {
     // console.log("Orb pressed:", name);
     // console.log("Current selected orb:", selectetOrb);
@@ -58,9 +56,8 @@ const App = () => {
       <Header />
       <main>
         <div className="main-content">
-          <div>
-            {displayLevel} , {breadcrubms.join(" > ")} , {selectetOrb} ,{" "}
-            {previousOrb}
+          <div className="breadcrumbs">
+            {breadcrubms.join(" > ")}
           </div>
           <OrbTree
             displayLevel={displayLevel}

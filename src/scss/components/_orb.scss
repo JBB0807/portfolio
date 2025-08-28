@@ -10,13 +10,16 @@
 
 .orb-container {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform-origin: center;
+  border-radius: 50%;
   transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
     height 0.5s ease-in-out, background-color 0.5s ease-in-out,
-    /* or color if using text color */ opacity 0.5s ease-in-out;
+    /* or color if using text color */ opacity 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out 0.25s,
+    filter 0.5s ease-in-out;
 }
 
 .orbit {
@@ -25,7 +28,9 @@
   position: absolute;
   transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
     height 0.5s ease-in-out, background-color 0.5s ease-in-out,
-    /* or color if using text color */ opacity 0.5s ease-in-out;
+    /* or color if using text color */ opacity 0.5s ease-in-out,
+    filter 0.3s ease-in-out; // 👈 animate filter
+
 }
 
 .orb-container svg {
@@ -34,7 +39,13 @@
   display: block;
 }
 
+.orbit:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba($orb-color-active, 0.7));
+}
+
 .orb-label {
+  user-select: none;
   width: 100%;
   max-height: 90%;
   max-width: 90%;
@@ -42,7 +53,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 130%;
+  font-size: 110%;
   text-align: center;
   color: $text-color-secondary;
   pointer-events: none; // ensures clicks go through to Orb if needed
@@ -58,8 +69,8 @@
 
 .category-orb,
 .tech-orb {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   color: $orb-color-active;
   transform: translate(-50%, 50%);
 }
@@ -68,11 +79,14 @@
   --angle: calc(90deg + var(--i) * 30deg); /* 30° spacing */
   --radius: 200px; /* distance from center */
 
-  width: 100px;
-  height: 100px;
+  // width: 100px;
+  // height: 100px;
   color: $orb-color-active;
   transform: rotate(var(--angle)) translate(var(--radius))
     rotate(calc(-1 * var(--angle)));
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgba($orb-color-active, 0.5);
+
 }
 
 .project-orb {
@@ -80,7 +94,7 @@
   width: 20%;
   height: 20%;
   color: $orb-color-active;
-  transform: translate(calc(-250% + 100% * (var(--i))), 300%);
+  transform: translate(calc(-250% + 100% * (var(--i))), 280%);
 }
 
 .previous {
@@ -89,14 +103,18 @@
   height: 100px;
   color: $orb-color-back;
   transform: translate(-200px, -50px);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px $border-color-primary, 0 0 60px 20px rgba($orb-color-back, 0.5);
 }
 
 .selected {
   width: 200px;
   height: 200px;
-  color: $orb-color-active;
+  color: $orb-color-selected;
   transform: translate(-50%, 0%);
   z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px $border-color-primary, 0 0 60px 20px rgba($orb-color-selected, 0.5);
 }
 
 .hidden {

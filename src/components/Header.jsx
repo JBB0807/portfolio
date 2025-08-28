@@ -5,6 +5,7 @@ import Profile from "../assets/profile.json";
 const email = Profile.email;
 const linkedin = Profile.linkedin;
 const github = Profile.github;
+const resume = Profile.resume;
 
 //Header with hamburger menu, home, email, and linkedin links
 const Header = () => {
@@ -12,13 +13,13 @@ const Header = () => {
 
   return (
     <header>
-      <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+      {/* <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
         <img
           src="/burger-icon.svg"
           alt="Menu"
           style={{ width: "24px", height: "24px" }}
         />
-      </button>
+      </button> */}
       <nav
         style={{
           display: menuOpen ? "flex" : "none",
@@ -40,6 +41,9 @@ const Header = () => {
       </a>
       <a href={github} target="_blank" rel="noopener noreferrer">
         Github
+      </a>
+      <a href={resume} target="_blank" rel="noopener noreferrer">
+        Resume
       </a>
     </header>
   );

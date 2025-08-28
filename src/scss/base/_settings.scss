@@ -2,26 +2,24 @@
 
 @use '../utilities/functions' as *;
 
-// Colors
-$background-color-primary: #3A79FF;
-$background-color-primary-gradient: #0037AE;
+$background-color-primary: #4758DA;        
+$background-color-primary-gradient: #001A81; 
+$background-color-secondary: #252B52;      
 
-$background-color-secondary: #2A3263;
+$text-color-primary: #F0F4FF;   
+$text-color-secondary: #000826; 
+$text-color-accent: #FF9E57;    
 
-$text-color-primary: #F5F5F5;
-$text-color-secondary: #000000;
-$text-color-accent: #ff5722;
+$orb-color-lower: #A5BAE6;      
 
-$orb-color-lower: #A5BAE6;
+$orb-color-selected: #1E90FF;   
+$orb-color-active: #00E5FF;     
+$orb-color-back: #8E6EC7;       
+
+$orb-color-selection: #66DFFF;  
+$border-color-primary: #6B8CFF; 
 
 
-$orb-color-active: #76D7C7;
-$orb-color-back: #CF5529;
-
-
-$orb-color-selection: #60CFFE;
-
-$border-color-primary: #738AFC;
 
 // Type
 // $bodyFont: 'Roboto', sans-serif;

@@ -42,7 +42,7 @@
   {
     "name": "Android",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Bluetooth Keyboard","Light Meter"]
+    "projects": ["Bluetooth Keyboard"]
   },
   {
     "name": "AWS",

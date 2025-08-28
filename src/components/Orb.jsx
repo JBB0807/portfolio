@@ -34,7 +34,7 @@ const Orb = ({
           <circle
             cx="50"
             cy="50"
-            r="45"
+            r="50"
             fill={`url(#${gradientId})`}
             stroke="currentColor"
             strokeWidth=".2"
