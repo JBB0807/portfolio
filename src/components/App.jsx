@@ -56,9 +56,8 @@ const App = () => {
       <Header />
       <main>
         <div className="main-content">
-          <div>
-            {displayLevel} , {breadcrubms.join(" > ")} , {selectetOrb} ,{" "}
-            {previousOrb}
+          <div className="breadcrumbs">
+            {breadcrubms.join(" > ")}
           </div>
           <OrbTree
             displayLevel={displayLevel}
@@ -68,20 +67,17 @@ const App = () => {
           />
 
           <p className={displayLevel !== 0 ? "hidden" : ""}>
-            As a software engineer with diverse experience, I have a strong
-            background in software development and maintenance, system
-            integration, and process optimization. During my time at Accenture,
-            I led the integration of enterprise systems, driving efficiency and
-            solving complex problems across multiple platforms.
-            <br />
-            <br />
-            I recently completed the Software Systems Development program at
-            BCIT, where I gained hands-on experience with modern frameworks such
-            as .NET, React, Node.js, and cloud technologies.
-            <br />
-            <br />I take a generalist approach to engineering, applying a broad
-            skill set to solve problems and deliver practical, well-integrated
-            solutions across different domains.
+            As a software engineer with broad experience, I specialize in
+            software development, system integration, troubleshooting, and
+            process optimization. At Accenture, I led enterprise system
+            integrations that improved efficiency and resolved complex issues
+            across multiple platforms. 
+            <br/><br/>I recently completed the Software Systems
+            Development program at BCIT, gaining hands-on experience with modern
+            frameworks including .NET, React, Node.js, and cloud technologies.
+            <br/><br/>I take a generalist engineering approach, using a wide skill set to
+            solve problems and deliver practical, well-integrated solutions
+            across domains.
           </p>
         </div>
 

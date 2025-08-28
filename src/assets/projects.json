@@ -3,25 +3,25 @@
     "name": "Battle Snake",
     "description": "A general intro, description of the project.",
     "url": "https://battlesnake.jbbalahadia.ca/",
-    "github" : ""
+    "github" : "https://github.com/JBB0807/ISSP5-Front-End.git"
   },
   {
     "name": "Battle Snake APIs",
     "description": "A general intro, description of the project.",
-    "url": "https://battlesnake.jbbalahadia.ca/",
-    "github" : ""
+    "url": "https://docs.google.com/document/d/1xkTE50laYkCGHJG35d9rkZlU4BQTu5SySIpfbB2dFXQ/edit?usp=sharing",
+    "github" : "https://github.com/JBB0807/bytecamp-services.git"
   },
   {
     "name": "Hextris Website",
     "description": "A general intro, description of the project",
     "url": "https://hextrixweb.jbbalahadia.ca/",
-    "github" : ""
+    "github" : "https://github.com/JBB0807/cloud-7-website.git"
   },
   {
     "name": "Hextris Game",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/hextris/",
-    "github" : ""
+    "github" : "https://github.com/JBB0807/hextris.git"
   },
   {
     "name": "Marquee",
@@ -33,7 +33,7 @@
     "name": "Calculator",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/ReactCalculatorJB/",
-    "github" : ""
+    "github" : "https://github.com/JBB0807/ReactCalculatorJB.git"
   }  ,
   {
     "name": "Bluetooth Keyboard",
@@ -70,5 +70,11 @@
     "description": "A general intro, description of the project",
     "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
     "github" : ""
+  },
+    {
+    "name": "AI Wardrobe DB",
+    "description": "A general intro, description of the project",
+    "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
+    "github" : "https://github.com/JBB0807/ai-wardrobe-database.git"
   }
 ]

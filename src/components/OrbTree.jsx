@@ -3,6 +3,10 @@ import Orb from "./Orb";
 import Categories from "../assets/categories.json";
 import Projects from "../assets/projects.json";
 import Tech from "../assets/tech.json";
+import Profile from "../assets/profile.json";
+
+//get data from profile.json
+const profileName = Profile.name;
 
 const OrbTree = ({
   displayLevel = 0,
@@ -51,7 +55,7 @@ const OrbTree = ({
     } else if (orbName === previousOrb) {
       return "previous";
     } else if (
-      (displayLevel === 0 && orbName === "JB Balahadia") ||
+      (displayLevel === 0 && orbName == profileName) ||
       //if display level is 1, show categories
       (displayLevel === 1 &&
         skillTree.categories.some((cat) => cat.name === orbName)) ||
@@ -70,7 +74,7 @@ const OrbTree = ({
     } else {
       let hide = "hidden";
       //temporary fix to hide the main orb without the twitching bug
-      if (orbName === "JB Balahadia") {
+      if (orbName == profileName) {
         hide += " previous";
       }
       return hide;
@@ -114,9 +118,9 @@ const OrbTree = ({
   return (
     <div className="orb-tree">
       <Orb
-        label="JB Balahadia"
-        className={`main-orb ${getDisplayClass("JB Balahadia", "selections")}`}
-        onOrbPressed={() => onOrbPressed("JB Balahadia")}
+        label={profileName}
+        className={`main-orb ${getDisplayClass(profileName, "selections")}`}
+        onOrbPressed={() => onOrbPressed(profileName)}
       />
 
       {/* <div className="category-container"> */}

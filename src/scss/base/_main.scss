@@ -45,6 +45,12 @@ main {
   }
 }
 
+.breadcrumbs{
+  color: $text-color-primary;
+  margin: 0rem 2rem;
+  font-size: small;
+}
+
 .side-content {
   padding: 0.3rem;
   background-color: $background-color-secondary;
