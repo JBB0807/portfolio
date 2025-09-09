@@ -28,7 +28,7 @@ const Orb = ({
           <defs>
             <radialGradient id={gradientId} cx="50%" cy="50%" r="70%">
               <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
-              <stop offset="100%" stopColor="currentColor" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="currentColor" stopOpacity=".9" />
             </radialGradient>
           </defs>
           <circle
