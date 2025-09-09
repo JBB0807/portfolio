@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://JBB0807.github.io/portfolio",
+  "homepage": "https://jbbalahadia.ca",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
