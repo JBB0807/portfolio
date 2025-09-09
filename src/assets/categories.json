@@ -17,7 +17,7 @@
   {
     "name": "Cloud DevOps",
     "description": "Describe my experiences in back-end development.",
-    "tech": ["AWS", "Docker"]
+    "tech": ["AWS"]
   },
   {
     "name": "Docs",
