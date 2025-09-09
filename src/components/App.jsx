@@ -56,9 +56,7 @@ const App = () => {
       <Header />
       <main>
         <div className="main-content">
-          <div className="breadcrumbs">
-            {breadcrubms.join(" > ")}
-          </div>
+          <div className="breadcrumbs">{breadcrubms.join(" > ")}</div>
           <OrbTree
             displayLevel={displayLevel}
             previousOrb={previousOrb}
@@ -67,17 +65,20 @@ const App = () => {
           />
 
           <p className={displayLevel !== 0 ? "hidden" : ""}>
-            As a software engineer with broad experience, I specialize in
-            software development, system integration, troubleshooting, and
-            process optimization. At Accenture, I led enterprise system
-            integrations that improved efficiency and resolved complex issues
-            across multiple platforms. 
-            <br/><br/>I recently completed the Software Systems
-            Development program at BCIT, gaining hands-on experience with modern
-            frameworks including .NET, React, Node.js, and cloud technologies.
-            <br/><br/>I take a generalist engineering approach, using a wide skill set to
-            solve problems and deliver practical, well-integrated solutions
-            across domains.
+            Software engineer bridging enterprise integration, mobile
+            applications, and modern full-stack development. At Accenture, I
+            worked on system integrations that cut processing time and
+            stabilized mission-critical platforms for a major U.S. utility.
+            <br />
+            <br />
+            At BCIT, I applied .NET, React, Node.js, and cloud technologies to
+            design and deploy full-stack applications with modern best
+            practices.
+            <br />
+            <br />
+            My versatility across domains allows me to connect systems,
+            troubleshoot deeply, and deliver scalable solutions that balance
+            practicality with innovation.
           </p>
         </div>
 

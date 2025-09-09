@@ -32,7 +32,7 @@ const Header = () => {
           padding: "1rem",
         }}
       ></nav>
-      <a href="/">Home</a>
+      <a href="./">Home</a>
       <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
         Email
       </a>

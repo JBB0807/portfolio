@@ -32,7 +32,7 @@
   {
     "name": "SQL NoSQL",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Battle Snake APIs","Hextris Website"]
+    "projects": ["AI Wardrobe DB"]
   },
   {
     "name": "React Native",
@@ -47,7 +47,7 @@
   {
     "name": "AWS",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Bluetooth Keyboard","Light Meter"]
+    "projects": ["Hextris Architecture"]
   },
   {
     "name": "Docker",
@@ -57,12 +57,12 @@
   {
     "name": "Design",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Bluetooth Keyboard","Light Meter"]
+    "projects": ["Machine Tag"]
   },
   {
     "name": "Diagrams",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Bluetooth Keyboard","Light Meter"]
+    "projects": ["Hextris Architecture","Assignment Upload"]
   },
   {
     "name": "Procedures",

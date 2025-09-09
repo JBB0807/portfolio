@@ -3,25 +3,37 @@
     "name": "Battle Snake",
     "description": "A general intro, description of the project.",
     "url": "https://battlesnake.jbbalahadia.ca/",
-    "github" : "https://github.com/JBB0807/ISSP5-Front-End.git"
+    "github": "https://github.com/JBB0807/ISSP5-Front-End.git"
   },
   {
     "name": "Battle Snake APIs",
     "description": "A general intro, description of the project.",
     "url": "https://docs.google.com/document/d/1xkTE50laYkCGHJG35d9rkZlU4BQTu5SySIpfbB2dFXQ/edit?usp=sharing",
-    "github" : "https://github.com/JBB0807/bytecamp-services.git"
+    "github": "https://github.com/JBB0807/bytecamp-services.git"
+  },
+  {
+    "name": "Assignment Upload",
+    "description": "A general intro, description of the project.",
+    "url": "https://drive.google.com/file/d/1ZOPlYopDqVDkxc7my_5p8jOTb0psvONx/view?usp=sharing",
+    "github": ""
   },
   {
     "name": "Hextris Website",
     "description": "A general intro, description of the project",
     "url": "https://hextrixweb.jbbalahadia.ca/",
-    "github" : "https://github.com/JBB0807/cloud-7-website.git"
+    "github": "https://github.com/JBB0807/cloud-7-website.git"
   },
   {
     "name": "Hextris Game",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/hextris/",
-    "github" : "https://github.com/JBB0807/hextris.git"
+    "github": "https://github.com/JBB0807/hextris.git"
+  },
+  {
+    "name": "Hextris Architecture",
+    "description": "A general intro, description of the project",
+    "url": "https://drive.google.com/file/d/1rg36YiH-tWA-mKpykFFQHixDtv4jt7ek/view?usp=sharing",
+    "github": ""
   },
   {
     "name": "Marquee",
@@ -33,48 +45,54 @@
     "name": "Calculator",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/ReactCalculatorJB/",
-    "github" : "https://github.com/JBB0807/ReactCalculatorJB.git"
-  }  ,
+    "github": "https://github.com/JBB0807/ReactCalculatorJB.git"
+  },
   {
     "name": "Bluetooth Keyboard",
     "description": "A general intro, description of the project",
     "url": "https://play.google.com/store/apps/details?id=com.jb.bluetoothbuttons",
-    "github" : ""
+    "github": ""
   },
   {
     "name": "Light Meter",
     "description": "A general intro, description of the project",
     "url": "https://play.google.com/store/apps/details?id=com.jb.lightmeter",
-    "github" : ""
+    "github": ""
   },
   {
     "name": "Pokedex",
     "description": "A general intro, description of the project",
     "url": "https://jbb0807.github.io/Pokedex/",
-    "github" : ""
+    "github": ""
   },
   {
     "name": "MVC Notes",
     "description": "A general intro, description of the project",
     "url": "https://docs.google.com/document/d/1UinTznPje9l1VffbPrd3B7vkyRd-TUHfxr-V6lOgJLU/edit?usp=sharing",
-    "github" : ""
+    "github": ""
   },
   {
     "name": "Installation Guide",
     "description": "A general intro, description of the project",
     "url": "https://docs.google.com/document/d/1A1JNXvhFoyIRF_xe2wAA5yXFg3eEq_vG3EjV2wHymTw/edit?usp=sharing",
-    "github" : ""
-  },  
+    "github": ""
+  },
   {
     "name": "Machine Tag - User Manual",
     "description": "A general intro, description of the project",
-    "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
-    "github" : ""
+    "url": "https://docs.google.com/document/d/1hmSCW5PLKNB53Rta-L8VKzllonWSYBS2/edit?usp=sharing",
+    "github": ""
   },
-    {
+  {
+    "name": "Machine Tag",
+    "description": "A general intro, description of the project",
+    "url": "https://docs.google.com/document/d/1jlrNtFzvogmQAW10LO16Su51tdTsjeTN/edit?usp=sharing",
+    "github": ""
+  },
+  {
     "name": "AI Wardrobe DB",
     "description": "A general intro, description of the project",
     "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
-    "github" : "https://github.com/JBB0807/ai-wardrobe-database.git"
+    "github": "https://github.com/JBB0807/ai-wardrobe-database.git"
   }
 ]
