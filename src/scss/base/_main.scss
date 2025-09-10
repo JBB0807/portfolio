@@ -1,7 +1,7 @@
 @use "../base/settings" as *;
 
 body {
-  background-image: url('/background.webp');
+  background-image: url("/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -27,6 +27,7 @@ main {
   height: 100%;
   p {
     position: fixed;
+    max-height: 50%;
     bottom: 3rem;
     width: 60%;
     left: 50%;
@@ -37,13 +38,11 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid $border-color-primary;
-    font-size: larger;
-
     transition: opacity 0.3s ease-in-out;
   }
 }
 
-.breadcrumbs{
+.breadcrumbs {
   color: $text-color-primary;
   margin: 0rem 2rem;
   font-size: small;
@@ -55,7 +54,9 @@ main {
   border-radius: 8px;
   box-shadow: 0px 0px 16px rgba(108, 243, 255, 0.199);
   width: 0%;
-  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  height: 100%;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
 }
 
 .side-content.expanded {
@@ -75,14 +76,27 @@ main {
   display: grid;
   grid-template-rows: 1fr auto;
   height: 100%;
+  opacity: 0;
+  animation: fadeInProjectContent 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInProjectContent {
+  to {
+    opacity: 1;
+  }
+}
+
+.close-content {
+  display: none;
 }
 
 iframe {
   height: 100%;
   border: 1px solid $border-color-primary;
+  border-radius: 8px;
 }
 
-.bottom-bar{
+.bottom-bar {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -104,6 +118,110 @@ iframe {
   width: 6rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  color: $text-color-secondary;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+  .main-content {
+    p {
+      width: 90%;
+    }
+  }
+
+  .side-content {
+    width: 100%;
+    max-width: 100%;
+    height: 0%;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .side-content.expanded {
+    height: 30%;
+    width: 100%;
+  }
+
+  .project-content {
+    position: fixed;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    background-color: $background-color-secondary;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px rgb(108, 243, 255);
+    top: 2.5%;
+    left: 2.5%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    z-index: 1000;
+  }
+
+  .close-content {
+    display: inline;
+  }
+
+  iframe {
+    height: 100%;
+    border: 1px solid $border-color-primary;
+  }
+
+  .bottom-bar {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .project-description {
+    font-size: large;
+    color: $text-color-primary;
+  }
+
+  .iframe-actions {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .iframe-actions button {
+    border: none;
+    height: 3rem;
+    width: 5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 1080px) and (max-height: 520px) {
+  main {
+    padding: 0.5rem;
+    flex-direction: row;
+  }
+  .main-content {
+    p {
+      width: 95%;
+      bottom: 0%;
+      max-height: 40%;
+      overflow-y: auto;
+    }
+  }
+
+  .side-content {
+    width: 0%;
+    height: 100%;
+  }
+
+  .side-content.expanded {
+    width: 60%;
+    height: 100%;
+  }
+
+  .iframe-actions button {
+    border: none;
+    height: 3rem;
+    width: 5rem;
+    padding: 0.25rem 0.5rem;
+  }
 }

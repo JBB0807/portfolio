@@ -18,8 +18,7 @@
   transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
     height 0.5s ease-in-out, background-color 0.5s ease-in-out,
     /* or color if using text color */ opacity 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out 0.25s,
-    filter 0.5s ease-in-out;
+    box-shadow 0.5s ease-in-out 0.25s, filter 0.5s ease-in-out;
 }
 
 .orbit {
@@ -30,7 +29,6 @@
     height 0.5s ease-in-out, background-color 0.5s ease-in-out,
     /* or color if using text color */ opacity 0.5s ease-in-out,
     filter 0.3s ease-in-out; // 👈 animate filter
-
 }
 
 .orb-container svg {
@@ -86,7 +84,6 @@
     rotate(calc(-1 * var(--angle)));
   border-radius: 50%;
   box-shadow: 0 0 30px 10px rgba($orb-color-active, 0.5);
-
 }
 
 .project-orb {
@@ -104,7 +101,8 @@
   color: $orb-color-back;
   transform: translate(-200px, -50px);
   border-radius: 50%;
-  box-shadow: 0 0 20px 5px $border-color-primary, 0 0 60px 20px rgba($orb-color-back, 0.5);
+  box-shadow: 0 0 20px 5px $border-color-primary,
+    0 0 60px 20px rgba($orb-color-back, 0.5);
 }
 
 .selected {
@@ -114,10 +112,125 @@
   transform: translate(-50%, 0%);
   z-index: 1000;
   border-radius: 50%;
-  box-shadow: 0 0 20px 10px $border-color-primary, 0 0 60px 20px rgba($orb-color-selected, 0.5);
+  box-shadow: 0 0 20px 10px $border-color-primary,
+    0 0 60px 20px rgba($orb-color-selected, 0.5);
 }
 
 .hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .orb-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  .orb-tree {
+    padding: 0.5rem;
+    position: relative;
+    display: block;
+  }
+
+  .orb-label {
+    font-size: small;
+  }
+
+  .main-orb {
+    height: 150px;
+    width: 150px;
+  }
+
+  .category-orb,
+  .tech-orb {
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, 55%);
+  }
+
+  .orbital-selections .orbit {
+    --radius: 150px; /* distance from center */
+  }
+
+  .previous {
+    height: 90px;
+    width: 90px;
+    transform: translate(-180%, -80%);
+  }
+
+  .selected {
+    height: 150px;
+    width: 150px;
+    transform: translate(-50%, 0%);
+  }
+
+  .project-orb {
+    width: 70px;
+    height: 70px;
+    left: 5%;
+    color: $orb-color-active;
+    transform: translate(calc(120% * (var(--i))), 300%);
+  }
+}
+
+
+@media (max-width: 1080px) and (max-height: 520px) {
+  .orb-tree {
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  .orb-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .orb-tree {
+    padding: 0.5rem;
+    position: relative;
+    display: block;
+  }
+
+  .orb-label {
+    font-size: small;
+  }
+
+  .main-orb {
+    height: 100px;
+    width: 100px;
+  }
+
+  .category-orb,
+  .tech-orb {
+    height: 50px;
+    width: 50px;
+    transform: translate(-50%, 0%);
+  }
+
+  .orbital-selections .orbit {
+    --radius: 120px; /* distance from center */
+  }
+
+  .previous {
+    height: 60px;
+    width: 60px;
+    transform: translate(-250%, -50%);
+  }
+
+  .selected {
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -20%);
+  }
+
+  .project-orb {
+    width: 60px;
+    height: 60px;
+    left: 5%;
+    color: $orb-color-active;
+    transform: translate(calc(120% * (var(--i))), 180%);
+  }
 }
