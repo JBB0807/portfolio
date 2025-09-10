@@ -108,6 +108,12 @@ const App = () => {
                           <button>Github</button>
                         </a>
                       )}
+                      <button
+                        className="close-content"
+                        onClick={() => setProject(null)}
+                      >
+                        Close
+                      </button>
                     </div>
                   </div>
                 </div>

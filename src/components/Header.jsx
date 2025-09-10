@@ -45,6 +45,9 @@ const Header = () => {
       <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
       </a>
+      <a href="https://docs.google.com/document/d/1KB6gwwtwsAupukV_HcgXS_oV3RcVkKVcDgNRJawVLPM" target="_blank" rel="noopener noreferrer">
+        Dev log
+      </a>
     </header>
   );
 };
