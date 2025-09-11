@@ -5,14 +5,24 @@
 
 footer {
   position: relative;
+  height: 100%;
   width: 100%;
   margin: 1rem;
   text-align: center;
   background-color: transparent;
   color: $text-color-primary;
 
-  small{
+  small {
     margin: auto;
+  }
+}
 
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
+  footer {
+    margin: 0rem;
+
+    small {
+      margin: auto;
+    }
   }
 }

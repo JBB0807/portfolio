@@ -10,7 +10,7 @@ body {
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -30,8 +30,8 @@ main {
     max-height: 50%;
     bottom: 3rem;
     width: 60%;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     color: $text-color-primary;
     background-color: $background-color-secondary;
     padding: 1rem 2rem;
@@ -123,14 +123,19 @@ iframe {
   transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-aspect-ratio: 3/4) {
   main {
     padding: 0.5rem;
     flex-direction: column;
   }
   .main-content {
     p {
+      bottom: 1rem;
+      max-height: 50%;
       width: 90%;
+      right: 50%;
+      transform: translateX(50%);
+      overflow-y: auto;
     }
   }
 
@@ -194,34 +199,18 @@ iframe {
   }
 }
 
-@media (max-width: 1080px) and (max-height: 520px) {
-  main {
-    padding: 0.5rem;
-    flex-direction: row;
-  }
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   .main-content {
     p {
-      width: 95%;
-      bottom: 0%;
-      max-height: 40%;
+      position: absolute;
+      max-height: 100%;
+      top: 1rem;
+      bottom: 1rem;
+      right: 1rem;
+      margin: auto;
+      transform: translateX(0);
+      width: 60%;
       overflow-y: auto;
     }
-  }
-
-  .side-content {
-    width: 0%;
-    height: 100%;
-  }
-
-  .side-content.expanded {
-    width: 60%;
-    height: 100%;
-  }
-
-  .iframe-actions button {
-    border: none;
-    height: 3rem;
-    width: 5rem;
-    padding: 0.25rem 0.5rem;
   }
 }

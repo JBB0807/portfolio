@@ -56,7 +56,7 @@ const App = () => {
       <Header />
       <main>
         <div className="main-content">
-          <div className="breadcrumbs">{breadcrubms.join(" > ")}</div>
+          {/* <div className="breadcrumbs">{breadcrubms.join(" > ")}</div> */}
           <OrbTree
             displayLevel={displayLevel}
             previousOrb={previousOrb}
