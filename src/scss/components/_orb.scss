@@ -44,14 +44,16 @@
 
 .orb-label {
   user-select: none;
-  width: 100%;
-  max-height: 90%;
-  max-width: 90%;
+  // width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   position: inherit;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 110%;
+  // font-size: larger;
+  font-size: min(max(1rem, 4vw), 100%); 
+  // 110%;
   text-align: center;
   color: $text-color-secondary;
   pointer-events: none; // ensures clicks go through to Orb if needed
@@ -135,10 +137,6 @@
     display: block;
   }
 
-  .orb-label {
-    font-size: small;
-  }
-
   .main-orb {
     height: 20vh;
     width: 20vh;
@@ -179,6 +177,10 @@
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   .main-orb {
     transform: translate(-250%, -20%);
+  }
+
+  .orb-label {
+  font-size: min(max(.5rem, 4vw), 70%); 
   }
 
   .category-orb,

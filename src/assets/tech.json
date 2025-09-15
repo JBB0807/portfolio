@@ -2,7 +2,7 @@
   {
     "name": "React",
     "description": "Describe my experiences/opinions about React.",
-    "projects": ["Portfolio Website", "Battle Snake", "Calculator"]
+    "projects": ["Portfolio Website", "Battle Snake"]
   },
   {
     "name": "JavaScript",
@@ -30,7 +30,7 @@
     "projects": ["Battle Snake APIs","Hextris Website"]
   },
   {
-    "name": "SQL NoSQL",
+    "name": "Databases",
     "description": "Describe my experiences/opinions about React.",
     "projects": ["AI Wardrobe DB"]
   },

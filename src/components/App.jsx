@@ -93,23 +93,30 @@ const App = () => {
                   <iframe src={project?.url} title={project?.name} />
                   <div className="bottom-bar">
                     <div className="project-description">
-                      Project descripion
+                      {project?.description}
                     </div>
                     <div className="iframe-actions">
-                      <a href={project?.url} target="_blank" rel="noopener">
-                        <button>Open in new tab</button>
+                      <a
+                        href={project?.url}
+                        target="_blank"
+                        rel="noopener"
+                        className="btn"
+                      >
+                        Open in new tab
                       </a>
                       {project?.github && (
                         <a
                           href={project?.github}
                           target="_blank"
                           rel="noopener"
+                          className="btn"
                         >
-                          <button>Github</button>
+                          Github
                         </a>
                       )}
                       <button
-                        className="close-content"
+                        className="btn"
+                        id="close-content"
                         onClick={() => setProject(null)}
                       >
                         Close

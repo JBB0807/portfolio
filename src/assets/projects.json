@@ -1,43 +1,43 @@
 [
   {
     "name": "Battle Snake",
-    "description": "A general intro, description of the project.",
+    "description": "Developed a web-based coding platform using React and Sass, designed for students with instructor tools that simplified assignment management and improved workflow.",
     "url": "https://battlesnake.jbbalahadia.ca/",
     "github": "https://github.com/JBB0807/ISSP5-Front-End.git"
   },
   {
     "name": "Battle Snake APIs",
-    "description": "A general intro, description of the project.",
+    "description": "Developed Node.js microservice APIs for OAuth, file handling, VM deployment, and web proxy. Deployed as containerized apps on Docker and Fly.io.",
     "url": "https://docs.google.com/document/d/1xkTE50laYkCGHJG35d9rkZlU4BQTu5SySIpfbB2dFXQ/edit?usp=sharing",
     "github": "https://github.com/JBB0807/bytecamp-services.git"
   },
   {
     "name": "Assignment Upload",
-    "description": "A general intro, description of the project.",
+    "description": "Documented process diagrams as part of system analysis during the Battle Snake project, aligning requirements with design decisions and identifying dependencies early in development.",
     "url": "https://docs.google.com/drawings/d/1kYcEHA8LAu7hyd5-7XOtf2lhZr3p1dbxHWupjIb85XQ/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "Hextris Website",
-    "description": "A general intro, description of the project",
+    "description": "Built node.js website using express and pug view engine. Integrated with AWS sdk to enable AWS authentication and database access.",
     "url": "https://hextrixweb.jbbalahadia.ca/",
     "github": "https://github.com/JBB0807/cloud-7-website.git"
   },
   {
     "name": "Hextris Game",
-    "description": "A general intro, description of the project",
+    "description": "Added features to a public-license JavaScript game, including login, authentication, score lookup, and high-score updates. Integrated AWS libraries and implemented API calls through custom JavaScript code.",
     "url": "https://jbb0807.github.io/hextris/",
     "github": "https://github.com/JBB0807/hextris.git"
   },
   {
     "name": "Hextris Architecture",
-    "description": "A general intro, description of the project",
+    "description": "Implemented AWS cloud services to handle authentication, score tracking, and player ranking, using Lambda functions with APIs, Cognito, EC2, and automated backups.",
     "url": "https://docs.google.com/drawings/d/1q7sbLDncLNnWOSYkg5F5CksUwy3nqlBsAAGWxPuGEHM/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "Marquee",
-    "description": "A general intro, description of the project",
+    "description": "A JavaScript game that combined vertical shooter and rhythm mechanics. Built as a foundation project to develop core JavaScript skils.",
     "url": "https://jbb0807.github.io/JavaScript-Game-Project/",
     "github": "https://github.com/JBB0807/JavaScript-Game-Project"
   },
@@ -49,7 +49,7 @@
   },
   {
     "name": "Bluetooth Keyboard",
-    "description": "A general intro, description of the project",
+    "description": "An Android application built with Kotlin, leveraging MVVM architecture, LiveData, and Coroutines. The app functions as a Bluetooth keyboard, touchpad, media controller, and game controller, designed to provide a seamless multi-purpose control experience across devices.",
     "url": "https://play.google.com/store/apps/details?id=com.jb.bluetoothbuttons",
     "github": ""
   },
@@ -67,32 +67,32 @@
   },
   {
     "name": "MVC Notes",
-    "description": "A general intro, description of the project",
+    "description": "Developed a study note for the .NET MVC course as part of a documentation exercise. The material was shared with cohorts to support collaborative learning and reinforce course concepts.",
     "url": "https://docs.google.com/document/d/1UinTznPje9l1VffbPrd3B7vkyRd-TUHfxr-V6lOgJLU/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "Installation Guide",
-    "description": "A general intro, description of the project",
+    "description": "Authored the installation guide for a group website project, detailing step-by-step instructions for setup, configuration, and deployment to ensure easy installation and usability for team members and future users.",
     "url": "https://docs.google.com/document/d/1A1JNXvhFoyIRF_xe2wAA5yXFg3eEq_vG3EjV2wHymTw/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "Machine Tag - User Manual",
-    "description": "A general intro, description of the project",
+    "description": "Created a comprehensive user manual for the Machine Tagging Automation project delivered to a client. The documentation guided end-users through setup, operation, and troubleshooting, ensuring smooth adoption of the system.",
     "url": "https://docs.google.com/document/d/1hmSCW5PLKNB53Rta-L8VKzllonWSYBS2/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "Machine Tag",
-    "description": "A general intro, description of the project",
+    "description": "Created a detailed design document for the Automated Machine Tagging software, including diagrams, feature specifications, and workflows. The document served as a reference for developers and end-users, ensuring clarity during implementation and smooth adoption by the client.",
     "url": "https://docs.google.com/document/d/1jlrNtFzvogmQAW10LO16Su51tdTsjeTN/edit?usp=sharing",
     "github": ""
   },
   {
     "name": "AI Wardrobe DB",
-    "description": "A general intro, description of the project",
-    "url": "https://1drv.ms/w/c/2e4d8b88b15ee231/ETHiXrGIi00ggC66xgYAAAAButVsjSE0j1lhm8Wvp2GbOg?e=hvOmJH",
+    "description": "Built and maintained a PostgreSQL database for a group website project, including schema design, query optimization, patch updates, implementation scripts, and data seeding scripts.",
+    "url": "https://docs.google.com/drawings/d/1UIO3lHDTUGN3AL9JQ45qv-szP7ky8QOQg7X6tpDNAPU/edit?usp=sharing",
     "github": "https://github.com/JBB0807/ai-wardrobe-database.git"
   }
 ]

@@ -49,12 +49,13 @@ main {
 }
 
 .side-content {
+  position: relative;
   padding: 0.3rem;
   background-color: $background-color-secondary;
   border-radius: 8px;
   box-shadow: 0px 0px 16px rgba(108, 243, 255, 0.199);
   width: 0%;
-  height: 100%;
+  height: 100rch;
   transition: width 0.5s ease-in-out, height 0.5s ease-in-out,
     opacity 0.5s ease-in-out;
 }
@@ -68,9 +69,9 @@ main {
   border: none;
 }
 
-.side-content * {
-  width: 100%;
-}
+// .side-content * {
+//   width: 100%;
+// }
 
 .project-content {
   display: grid;
@@ -91,6 +92,7 @@ main {
 }
 
 iframe {
+  width: 100%;
   height: 100%;
   border: 1px solid $border-color-primary;
   border-radius: 8px;
@@ -109,18 +111,36 @@ iframe {
 
 .iframe-actions {
   display: flex;
+  flex-direction: row;
+  justify-content: end;
   gap: 1rem;
+  height: 100%;
+  align-items: center;
 }
 
-.iframe-actions button {
+.btn {
+  margin: 0;
   border: none;
   height: 4rem;
   width: 6rem;
   padding: 0.5rem 1rem;
+  text-align: center;
   border-radius: 4px;
   color: $text-color-secondary;
+  background-color: $button-color-primary;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-content {
+  display: none;
 }
 
 @media (max-aspect-ratio: 3/4) {
@@ -161,13 +181,11 @@ iframe {
     box-shadow: 0px 0px 16px rgb(108, 243, 255);
     top: 2.5%;
     left: 2.5%;
-    display: grid;
-    grid-template-rows: 1fr auto;
     z-index: 1000;
   }
 
-  .close-content {
-    display: inline;
+  #close-content {
+    display: flex;
   }
 
   iframe {
@@ -176,29 +194,51 @@ iframe {
   }
 
   .bottom-bar {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .project-description {
-    font-size: large;
+    font-size: 1rem;
     color: $text-color-primary;
   }
 
   .iframe-actions {
-    display: flex;
-    gap: 0.25rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: space-around;
   }
 
-  .iframe-actions button {
+  .btn {
     border: none;
     height: 3rem;
-    width: 5rem;
-    padding: 0.25rem 0.5rem;
+    width: auto;
+    padding: 0.5rem 1rem;
   }
 }
 
+//targeting tablets on portrait
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 2) and (max-resolution: 160dpi) {
+  .main-content {
+    p {
+      bottom: 10vh;
+      font-size: 1.5rem;
+      overflow-y: auto;
+    }
+  }
+
+  .project-description {
+    font-size: 1.2rem;
+    color: $text-color-primary;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+//targeting phone on landscape
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   .main-content {
     p {
@@ -212,5 +252,33 @@ iframe {
       width: 60%;
       overflow-y: auto;
     }
+  }
+
+  .bottom-bar {
+    margin: 0;
+    padding: 0.25rem;
+  }
+
+  .project-description {
+    height: auto;
+    margin: 0;
+    font-size: small;
+    max-height: 20vh;
+    overflow-y: auto;
+  }
+
+  .iframe-actions {
+    margin: 0;
+    width: 100%;
+    gap: 0.5rem;
+    justify-content: end;
+  }
+
+  .btn {
+    border: none;
+    height: 3rem;
+    width: 4rem;
+    font-size: small;
+    padding: 0.25rem 0.5rem;
   }
 }

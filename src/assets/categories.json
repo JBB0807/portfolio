@@ -7,7 +7,7 @@
   {
     "name": "BackEnd",
     "description": "Describe my experiences in front-end development.",
-    "tech": ["Node.js", "SQL NoSQL"]
+    "tech": ["Node.js", "Databases"]
   },
   {
     "name": "Mobile",

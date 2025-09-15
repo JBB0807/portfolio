@@ -17,6 +17,12 @@ footer {
   }
 }
 
+@media (max-aspect-ratio: 3/4) {
+  footer{
+    margin: 0.25rem;
+  }
+}
+
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   footer {
     margin: 0rem;
