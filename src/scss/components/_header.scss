@@ -41,11 +41,11 @@ header {
 @media (max-aspect-ratio: 3/4) {
   header {
     gap: 1rem;
-    padding: 1rem .5rem .5rem 1rem;
+    padding: 1rem 0.5rem 0.5rem 1rem;
     flex-wrap: wrap;
   }
 
-   a {
+  a {
     color: $text-color-primary;
     font-weight: 300;
     font-size: smaller;
@@ -53,14 +53,33 @@ header {
 
   button {
     color: $text-color-primary;
-    font-size: .75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-aspect-ratio: 2) and (max-resolution: 160dpi) {
+  header {
+    gap: 2rem;
+    padding: 3rem 1rem 1rem 2rem;
+    flex-wrap: wrap;
+
+    a {
+      color: $text-color-primary;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    button {
+      color: $text-color-primary;
+      // font-size: 3em;
+    }
   }
 }
 
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   header {
     gap: 1rem;
-    padding: 1rem .5rem .5rem 1rem;
+    padding: 1rem 0.5rem 0.5rem 1rem;
     flex-wrap: wrap;
   }
 }
