@@ -38,11 +38,59 @@ header {
   }
 }
 
+#search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #searchInput {
+    width: 100%;
+    font-size: small;
+    padding: 0.5rem;
+    border: 1px solid $border-color-primary;
+    border-radius: 4px;
+    color: $text-color-primary;
+    background-color: $background-color-secondary;
+
+    &:focus {
+      outline: none;
+      border-color: $orb-color-active;
+      box-shadow: 0 0 5px rgba($orb-color-active, 0.5);
+    }
+  }
+
+  #searchClear{
+    position: absolute;
+    right: 0.5rem;
+    background: $background-color-primary;
+    border: none;
+    color: $text-color-primary;
+    font-size: smaller;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $text-color-accent;
+    }
+  }
+}
+
+//targeting phones and small tablets on portrait
 @media (max-aspect-ratio: 3/4) {
   header {
     gap: 1rem;
     padding: 1rem 0.5rem 0.5rem 1rem;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    #search-container{
+      width: 100%;
+    }
   }
 
   a {
@@ -57,6 +105,7 @@ header {
   }
 }
 
+//targeting tablets on portrait
 @media only screen and (orientation: portrait) and (max-aspect-ratio: 2) and (max-resolution: 160dpi) {
   header {
     gap: 2rem;
@@ -76,6 +125,7 @@ header {
   }
 }
 
+//targeting phone on landscape
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   header {
     gap: 1rem;

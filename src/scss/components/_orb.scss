@@ -88,6 +88,15 @@
   box-shadow: 0 0 30px 10px rgba($orb-color-active, 0.5);
 }
 
+.search-orb {
+  position: relative;
+  top: 20vh;
+  left: 10vh;
+  width: 18vh;
+  height: 18vh;
+  color: $orb-color-active;
+}
+
 .project-orb {
   opacity: 1;
   width: 18vh;
@@ -124,6 +133,7 @@
   pointer-events: none;
 }
 
+//targeting phones and small tablets on portrait
 @media (max-aspect-ratio: 3/4) {
   .orb-container {
     position: absolute;
@@ -165,6 +175,15 @@
     transform: translate(-50%, 0%);
   }
 
+  .search-orb {
+    position: relative;
+    top: 10vh;
+    left: 5vh;
+    width: 10vh;
+    height: 10vh;
+    color: $orb-color-active;
+  }
+
   .project-orb {
     width: 8vh;
     height: 8vh;
@@ -174,6 +193,7 @@
   }
 }
 
+//targeting phone on landscape
 @media only screen and (orientation: landscape) and (min-aspect-ratio: 2) and (min-resolution: 150dpi) {
   .main-orb {
     transform: translate(-250%, -20%);
@@ -198,6 +218,13 @@
 
   .previous {
     transform: translate(-250%, -70%);
+  }
+
+  .search-orb {
+    position: relative;
+    // top: 5%;
+    // left: 5%;
+    color: $orb-color-active;
   }
 
   .project-orb {
