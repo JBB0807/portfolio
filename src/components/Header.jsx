@@ -8,7 +8,7 @@ const github = Profile.github;
 const resume = Profile.resume;
 
 //Header with hamburger menu, home, email, and linkedin links
-const Header = () => {
+const Header = ({ onSearch, searchTerm }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -45,9 +45,31 @@ const Header = () => {
       <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
       </a>
-      <a href="https://docs.google.com/document/d/1KB6gwwtwsAupukV_HcgXS_oV3RcVkKVcDgNRJawVLPM" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://docs.google.com/document/d/1KB6gwwtwsAupukV_HcgXS_oV3RcVkKVcDgNRJawVLPM"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Dev log
       </a>
+      <div id="search-container">
+        <input
+          id="searchInput"
+          aria-label="search"
+          placeholder="search: tech, skill, etc."
+          value={searchTerm}
+          onChange={(e) => onSearch(e.target.value)}
+        />
+        {searchTerm && (
+          <button
+            id="searchClear"
+            aria-label="clear search"
+            onClick={() => onSearch("")}
+          >
+            clear
+          </button>
+        )}
+      </div>
     </header>
   );
 };

@@ -10,7 +10,9 @@ body {
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100%;
+  gap: 0;
+  max-height: 100%;
+  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -23,8 +25,28 @@ main {
 
 .main-content {
   position: relative;
+  display: flex;
   flex: 1;
   height: 100%;
+
+  .orb-tree-container {
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+
+  .search-results {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-flow: wrap;
+    flex: 1;
+    height: 100%;
+    overflow: scroll;
+  }
+
   p {
     position: fixed;
     max-height: 50%;
@@ -75,7 +97,7 @@ main {
 
 .project-content {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 75% 25%;
   height: 100%;
   opacity: 0;
   animation: fadeInProjectContent 0.5s ease-in-out forwards;
@@ -99,6 +121,7 @@ iframe {
 }
 
 .bottom-bar {
+  height: 100%;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -107,6 +130,7 @@ iframe {
 .project-description {
   font-size: larger;
   color: $text-color-primary;
+  overflow-y: auto;
 }
 
 .iframe-actions {
@@ -143,19 +167,28 @@ iframe {
   display: none;
 }
 
+//targeting phones and small tablets on portrait
 @media (max-aspect-ratio: 3/4) {
   main {
     padding: 0.5rem;
     flex-direction: column;
   }
   .main-content {
+    flex-direction: column;
+
     p {
       bottom: 1rem;
-      max-height: 50%;
+      max-height: 45%;
       width: 90%;
       right: 50%;
       transform: translateX(50%);
       overflow-y: auto;
+    }
+
+    .orb-tree-container {
+      position: relative;
+      width: 100%;
+      flex: 1;
     }
   }
 
@@ -189,7 +222,6 @@ iframe {
   }
 
   iframe {
-    height: 100%;
     border: 1px solid $border-color-primary;
   }
 
@@ -200,7 +232,8 @@ iframe {
   }
 
   .project-description {
-    font-size: 1rem;
+    height: 100%;
+    font-size: .9rem;
     color: $text-color-primary;
   }
 
@@ -251,6 +284,10 @@ iframe {
       transform: translateX(0);
       width: 60%;
       overflow-y: auto;
+    }
+
+    .search-results {
+      gap: 0.5rem;
     }
   }
 
