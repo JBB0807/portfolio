@@ -19,7 +19,26 @@ const App = () => {
   const [breadcrubms, setBreadCrumbs] = useState([]);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const query = searchParams.get('query') || '';
+    setSearchTerm(query);
+  }, []); // Run once on mount
+
+
+  useEffect(() => {
     resetData();
+
+    const params = new URLSearchParams(window.location.search);
+    if (debouncedTerm) {
+      params.set('query', debouncedTerm);
+    } else {
+      params.delete('query');
+    }
+
+    // Update URL without reloading
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', newUrl);
+
   }, [debouncedTerm]);
 
   useEffect(() => {
