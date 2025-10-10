@@ -42,9 +42,9 @@ const Header = ({ onSearch, searchTerm }) => {
       <a href={github} target="_blank" rel="noopener noreferrer">
         Github
       </a>
-      <a href={resume} target="_blank" rel="noopener noreferrer">
+      {/* <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
-      </a>
+      </a> */}
       <a
         href="https://docs.google.com/document/d/1KB6gwwtwsAupukV_HcgXS_oV3RcVkKVcDgNRJawVLPM"
         target="_blank"
